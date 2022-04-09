@@ -20,10 +20,13 @@ const Geo =  () => {
     },[]) 
     
 
-    useEffect(async()=>{        
+    useEffect(()=>{   
+        const getData = async()=>{
         const res = await fetch(`${api_url}weather?lat=${lat}&lon=${lon}&appid=${key}`)
-        setWeather( await res.json())        
-                  
+        setWeather( await res.json()) 
+
+        }                    
+     getData();             
           
 
     },[lat, lon])              

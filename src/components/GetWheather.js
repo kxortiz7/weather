@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import climate from '../assets/img/clima.jpg'
 
 
@@ -33,7 +33,7 @@ const GetWheather = ({ weather }) => {
                     <h5 className='text-center'>{weather?.name},{weather.sys?.country}</h5>
                     <div className='row'>
                         <div className='col-md-5'>
-                            <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`}></img>
+                            <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" ></img>
                             {(tempC !== NaN) ?<li className=' text-center list-unstyled'>
                                 <i className="bi bi-thermometer-half"></i>
                                 <b> Temp:  </b>
