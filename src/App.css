@@ -1,38 +1,54 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-wheather{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+   
+
+  
+}
+.card-wheather img{
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+  
+
+ 
+}
+.num{
+  position: absolute;
+  margin-top: 50px;
+  background-color: rgb(189, 228, 228);
+  width: 400px;
+  height: 450px;
+  border-radius: 15px;
+ 
+
 }
 
-.App-link {
-  color: #61dafb;
+.card-wheather h2{
+  text-align: center;
+  color: rgb(129, 52, 201);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-md-6 img{
+  position: relative !important;
+}
+
+.col-md-5 img{
+  height: 200px;
+  width: 200px;
+}
+.col-md-5 li{
+  margin-top: 170px;
+  margin-left: 15px;
+}
+
+button{
+  width: 200px !important;
+  
 }
