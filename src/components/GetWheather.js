@@ -1,20 +1,16 @@
-import React, {  useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import climate from '../assets/img/clima.jpg'
 
 
 
 
-const GetWheather = ({ weather }) => {
-
-    const tempC = `${(weather.main?.temp - 273.15).toFixed(2)} °C`
-    const tempF = `${((weather.main?.temp * 9 / 5) + 32).toFixed(2)} °F`
-
-    const [temperature, setTemperature] = useState(tempC)
-
-
-
-
-
+const GetWheather = ({ weather}) => { 
+    
+    const tempF =`${((weather.main?.temp * 9 / 5) + 32).toFixed(2)} °F` 
+    const tempC= `${(weather.main?.temp - 273.15).toFixed(2)} °C`
+       
+    const [temperature, setTemperature] = useState("")
+         
     const changeTemperature = () => {
 
         if (temperature === tempC) {
@@ -22,9 +18,9 @@ const GetWheather = ({ weather }) => {
         } else { setTemperature(tempC) }
 
     }
-
+     console.log(tempC)
    
-        
+      
         return (
             <div className='card-wheather'>
                 <img src={climate} alt="" />
@@ -34,11 +30,11 @@ const GetWheather = ({ weather }) => {
                     <div className='row'>
                         <div className='col-md-5'>
                             <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" ></img>
-                            {(tempC !== NaN) ?<li className=' text-center list-unstyled'>
+                            <li className=' text-center list-unstyled'>
                                 <i className="bi bi-thermometer-half"></i>
                                 <b> Temp:  </b>
                                 {temperature}
-                            </li>: document.write("Loading...") }
+                            </li>
                             
 
                         </div>

@@ -7,6 +7,7 @@ const Geo =  () => {
     const[weather, setWeather] = useState({})
     const[lat, setLat] = useState("51.50853")
     const[lon, setLon] = useState("-0.12574") 
+   
  
 
     
@@ -17,6 +18,7 @@ const Geo =  () => {
         navigator.geolocation.getCurrentPosition(position =>  {            
             setLat(position.coords.latitude);
             setLon(position.coords.longitude) })
+           
     },[]) 
     
 
@@ -24,6 +26,7 @@ const Geo =  () => {
         const getData = async()=>{
         const res = await fetch(`${api_url}weather?lat=${lat}&lon=${lon}&appid=${key}`)
         setWeather( await res.json()) 
+        
 
         }                    
      getData();             
